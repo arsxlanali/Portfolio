@@ -1,0 +1,89 @@
+
+
+#navbar-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 18px 35px;
+    background-color: $primary-color2;
+    width: 92%;
+    // -webkit-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
+    position: fixed;
+    opacity: 0.8;
+    transition: ease-in-out 0.5s;
+    z-index: 9;
+    .logo {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        cursor: pointer;
+        // filter: blur(0px);
+        // z-index: 1000;
+    }
+    h1 {
+        font-family: $font-logo;
+        font-size: 2em;
+        color: $primary-font-color;
+    }
+    .navlinks-desktop {        
+        display: none;
+    }
+    @media (min-width: 770px) {
+        & {
+            padding: 20px 60px;
+        }
+        a {
+            text-decoration: none;
+            color: $subheading-font-color;
+            font-family: $sub-heading-font;
+        }
+        a:hover {
+            color: $primary-font-color;
+        }
+        .logo {
+            transition: transform .3s ease-out;
+        }
+        .logo:hover {
+            transform: translate(-5px, 0);
+        }   
+        .navlinks-desktop {
+            display: flex;
+            flex-direction: row;
+            width: 28.125em;
+            justify-content: space-between;
+            font-size: 0.9em;
+            align-items: center;      
+        }
+        .nav-but-wrap {
+            display: none;
+        }
+    }
+    @media (min-width: 1050px){
+        .navlinks-desktop {
+            font-size: 1em;
+        }
+    }
+}
+#navbar-moblie {
+    position:absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: $primary-color1;
+    z-index: 100;
+    transition: ease 0.15s;
+    color: $heading-font-color;
+    text-align: center;
+    padding-top: 4em;
+    a {
+        text-decoration: none;
+        color: $subheading-font-color;
+        font-family: $sub-heading-font;
+    }
+    .navlinks-mobile > ul > li {
+
+        list-style: none;
+        line-height: 11vh;
+    }
+}
